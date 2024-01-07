@@ -1,0 +1,44 @@
+/* 1 */
+#addButton:hover{
+   -fx-cursor:hand;
+}
+/* 2 */
+#crossButton{
+   -fx-background-color:  #2F4F4F;
+   -fx-background-radius: 300px;
+   -fx-font-weight:bold;
+   -fx-text-fill:White;
+   -fx-font-size:15px;
+}
+#crossButton:hover{
+   -fx-text-fill:#ff7f50;
+   -fx-cursor:hand;
+}
+/* 3 */
+#todoRadioButton {
+    -fx-mark-color:#ff7f50;
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+    -fx-font-size: 15px;
+    -fx-translate-y:4px;
+}
+#todoRadioButton:hover{
+    -fx-cursor:hand;
+}
+
+/* 4 */
+#list .list-cell:filled:selected {
+    -fx-background-color: transparent;
+}
+#list .scroll-bar:vertical,
+#list .scroll-bar:horizontal {
+    -fx-base: #2F4F4F; /* Change the base color of the scroll bars */
+
+}
+
+#list .scroll-bar:vertical .increment-button,
+#list .scroll-bar:vertical .decrement-button,
+#list .scroll-bar:horizontal .increment-button,
+#list .scroll-bar:horizontal .decrement-button {
+    -fx-base: #ff7f50; /* Change the color of the increment and decrement buttons */
+}
