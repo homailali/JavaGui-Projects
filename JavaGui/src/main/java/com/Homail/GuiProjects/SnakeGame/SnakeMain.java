@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class SnakeMain extends Application {
-    // Pushing 
+    // Changed
     // Fields
     private FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("/com/Homail/GuiProjects/SnakeGame/SnakeFxmlFile.fxml"));
     private Parent parent=fxmlLoader.load();
