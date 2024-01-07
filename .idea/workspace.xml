@@ -1,80 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="84b6ecae-1f50-480d-89b8-9567ab89d63e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/Tic-tac-toe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/calculator-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/BG Images/Flag_of_Palestine.svg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/BG Images/Scissor-removebg-preview-removebg-preview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/BG Images/bukfs7bw9rd082tny00c.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/BG Images/clhrwj1tp000fl108iijcos17_1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/BG Images/download.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/BG Images/paper-removebg-preview-removebg-preview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/BG Images/rock-removebg-preview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/BG Images/snake-game-ai-gen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/CustomJavaCode/CustomArrayList/CALMethodsToShow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/CustomJavaCode/CustomArrayList/CustomArrayList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiPractice/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/Calculator/CalculatorDesigns$1ClassForSettingButtons.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/Calculator/CalculatorDesigns.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/Calculator/CalculatorEventHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/Calculator/CalculatorMain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/Calculator/CalculatorNodes.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/Calculator/CheckForBugsInText.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/Calculator/PerformCalculations.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/HangManGame/ChooseARandomWord.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/HangManGame/CloseButtonHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/HangManGame/HangManCss.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/HangManGame/HangManEventHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/HangManGame/HangManFxml.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/HangManGame/HangManFxmlController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/HangManGame/HangManMain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/HangManGame/RestartButtonHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/PxToRem/ClassToCallMainOfPxToRem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/PxToRem/PxToRemController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/PxToRem/PxToRemFxml.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/PxToRem/PxToRemMain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/PxToRem/pxToRemStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/RockPaperScissors/RPSEventHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/RockPaperScissors/RPSFxmlController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/RockPaperScissors/RPSMain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/RockPaperScissors/RestartEventHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/RockPaperScissorsResources/RPS.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/RockPaperScissorsResources/RPSFxml.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/SnakeGame/AnimationHandleCollisionDetection.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/SnakeGame/GameRestartOperations.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/SnakeGame/PutSnakeOnAnimationAndHandleFood.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/SnakeGame/SceneEventHandler$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/SnakeGame/SceneEventHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/SnakeGame/SnakeFxmlController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/SnakeGame/SnakeFxmlFile.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/SnakeGame/SnakeMain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/SnakeGame/SnakeStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/TicTacToe/TicTacToeBoardDesign$1ClassForDesign.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/TicTacToe/TicTacToeBoardDesign.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/TicTacToe/TicTacToeHandleEvents$1ResetButtons.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/TicTacToe/TicTacToeHandleEvents.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/TicTacToe/TicTacToeMain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/TicTacToe/TicTacToeNodes.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ToDoApp/Style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ToDoApp/ToDoAppEventHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ToDoApp/ToDoFxml.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ToDoApp/ToDoFxmlControl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ToDoApp/ToDoMain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/Sounds/food_G1U6tlb.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/hangMan.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/module-info.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/rockPaperScissor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/snake.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/to-do-app.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/JavaGuiCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JavaGuiCode.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/SnakeGame/SnakeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/SnakeGame/SnakeMain.java" afterDir="false" />
-    </list>
+    <list default="true" id="84b6ecae-1f50-480d-89b8-9567ab89d63e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -87,19 +28,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.SnakeMain.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/JavafxSetup/javafx-sdk-21.0.1/lib/javafx.web.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.SnakeMain.executor": "Run",
+    "Application.StopWatchMain.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/JavafxSetup/javafx-sdk-21.0.1/lib/javafx.web.jar",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration name="StopWatchMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Homail.GuiProjects.StopWatch.StopWatchMain" />
+      <module name="JavaGuiCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Homail.GuiProjects.StopWatch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.StopWatchMain" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
