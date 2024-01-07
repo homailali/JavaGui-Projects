@@ -5,6 +5,7 @@ module org.example.javafx {
 
 
     opens com.Homail.GuiProjects.ToDoApp to javafx.fxml;
+    opens com.Homail.GuiProjects.StopWatch to javafx.fxml;
     opens com.Homail.GuiProjects.PxToRem to javafx.fxml;
     opens com.Homail.GuiProjects.SnakeGame to javafx.fxml;
     opens com.Homail.GuiProjects.HangManGame to javafx.fxml;
