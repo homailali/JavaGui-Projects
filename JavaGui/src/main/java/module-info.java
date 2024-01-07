@@ -13,6 +13,7 @@ module org.example.javafx {
     exports com.Homail.GuiPractice;
     exports com.Homail.GuiProjects.ToDoApp;
     exports com.Homail.GuiProjects.PxToRem;
+    exports com.Homail.GuiProjects.StopWatch;
     exports com.Homail.GuiProjects.TicTacToe;
     exports com.Homail.GuiProjects.SnakeGame;
     exports com.Homail.GuiProjects.Calculator;
