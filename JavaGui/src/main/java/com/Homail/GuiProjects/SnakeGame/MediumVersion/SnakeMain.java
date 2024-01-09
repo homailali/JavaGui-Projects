@@ -1,13 +1,10 @@
 package com.Homail.GuiProjects.SnakeGame.MediumVersion;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.io.IOException;
-
 public class SnakeMain extends Application {
     //Fields
     private final FXMLLoader FXML_LOADER=new FXMLLoader(getClass().getResource("/com/Homail/GuiProjects/SnakeGame/Medium/SnakeMediumFxml.fxml"));
@@ -26,18 +23,17 @@ public class SnakeMain extends Application {
         sceneSettings();
         stageSettings();
     }
-
-
     private void sceneSettings(){
+
         this.SCENE.setOnKeyPressed(this.HANDLE_SNAKE_MOVEMENT);
     }
-
     private void stageSettings(){
         this.STAGE.setScene(SCENE);
         this.STAGE.setTitle("Medium Snake Game");
         this.STAGE.show();
     }
     public static void main(String[] args) {
+
         launch(args);
     }
 }
