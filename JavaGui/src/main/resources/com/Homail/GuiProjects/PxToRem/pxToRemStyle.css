@@ -1,9 +1,6 @@
 .stayOnTopBtn{
-   -fx-background-color: #2294ed;
-   -fx-text-fill: #ffffff;
+   -fx-background-color: #3498DB;
+   -fx-text-fill: #ECF0F1;
    -fx-cursor:hand;
    -fx-font-size:20;
-}
-.stayOnTopBtn:hover{
-   -fx-background-color:#0061AD;
 }

@@ -37,6 +37,5 @@ public class StopWatchController implements Initializable {
     }
     protected void getStopWatchLogic(StopWatchLogic stopWatchLogic){
         this.stopWatchLogic=stopWatchLogic;
-        this.stopWatchLogic.setCurrentDateAndTime();
     }
 }

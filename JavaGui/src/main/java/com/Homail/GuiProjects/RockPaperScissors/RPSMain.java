@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 import javafx.application.Application;
 public class RPSMain extends Application{
     public void start(Stage stage) throws Exception{
-        FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("/com/Homail/GuiProjects/RockPaperScissorsResources/RPSFxml.fxml"));
+        FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("/com/Homail/GuiProjects/RockPaperScissorsR/RPSFxml.fxml"));
         Parent parent=fxmlLoader.load();
         Scene scene=new Scene(parent);
         stageSettings(stage,scene);

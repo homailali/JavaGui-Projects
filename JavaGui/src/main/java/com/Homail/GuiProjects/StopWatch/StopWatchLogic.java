@@ -18,6 +18,7 @@ public class StopWatchLogic {
     protected StopWatchLogic(StopWatchMain stopWatchMain,StopWatchController stopWatchController){
         this.stopWatchMain=stopWatchMain;
         this.stopWatchController=stopWatchController;
+        this.setCurrentDateAndTime();
         this.makeAnimation();
     }
     // Methods

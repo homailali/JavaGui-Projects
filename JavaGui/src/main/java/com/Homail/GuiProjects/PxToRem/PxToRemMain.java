@@ -3,6 +3,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 public class PxToRemMain extends Application {
     protected Stage stage = new Stage();
@@ -26,8 +27,9 @@ public class PxToRemMain extends Application {
     private void stageSettings(Stage stage, Scene scene) {
         stage.setScene(scene);
         stage.setResizable(false);
-        stage.setTitle("Pixel to Rem");
+        stage.setTitle("Size Unit Calculator");
         stage.setAlwaysOnTop(false);
+        stage.getIcons().add(new Image("PxToRem.png"));
         stage.show();
     }
 }
