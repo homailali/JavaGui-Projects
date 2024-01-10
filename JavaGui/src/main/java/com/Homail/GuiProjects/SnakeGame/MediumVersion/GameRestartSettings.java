@@ -40,7 +40,6 @@ public class GameRestartSettings {
         this.SNAKE_CONTROLLER.mainBoard.getChildren().removeAll(this.SNAKE_ANIMATION_MAKER.snakeArr);
         this.SNAKE_ANIMATION_MAKER.snakeArr=new ArrayList<>();
         this.SNAKE_ANIMATION_MAKER.snakeArr.add(this.SNAKE_CONTROLLER.snakeHead);
-        System.out.println(this.SNAKE_CONTROLLER.mainBoard.getChildren());
     }
     private void resetScores(){
         this.SNAKE_ANIMATION_MAKER.scoreCount=0;

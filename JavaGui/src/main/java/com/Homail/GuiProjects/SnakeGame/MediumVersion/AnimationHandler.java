@@ -23,18 +23,26 @@ public class AnimationHandler {
             this.setScoreAtCenter();
             this.checkIfSnakeEatsFood();
             this.setMainBoardTextAtCenter();
+            this.moveTheMainBoardTextAndScoreTextToTop();
             this.checkIfSnakeReachedTheEnds();
             this.checkIfSnakeCollidesWithItself();
             this.modifyMainBoardTextValue();
         }
         this.SNAKE_ANIMATION_MAKER.boolToNotAllowUserPressTwoKeysAtATime = true;
     }
+
+
+
+    private void moveTheMainBoardTextAndScoreTextToTop(){
+        this.SNAKE_CONTROLLER.scoreText.toFront();
+        this.SNAKE_CONTROLLER.mainBoardText.toFront();
+    }
     private void setScoreAtCenter(){
         this.SNAKE_CONTROLLER.scoreText.setLayoutX(this.SNAKE_MAIN.SCENE.getWidth()/2-285);
         this.SNAKE_CONTROLLER.scoreText.setLayoutY(this.SNAKE_MAIN.SCENE.getHeight()/2+37);
     }
     private void setMainBoardTextAtCenter(){
-        this.SNAKE_CONTROLLER.mainBoardText.setLayoutY(this.SNAKE_MAIN.SCENE.getHeight()/2+240);
+        this.SNAKE_CONTROLLER.mainBoardText.setLayoutY(this.SNAKE_MAIN.SCENE.getHeight()/2-240);
         this.SNAKE_CONTROLLER.mainBoardText.setLayoutX(this.SNAKE_MAIN.SCENE.getWidth()/2-280);
     }
     private void modifyMainBoardTextValue(){
@@ -103,36 +111,26 @@ public class AnimationHandler {
         this.SNAKE_ANIMATION_MAKER.snakeArr.getLast().setVisible(false);
     }
     private void checkIfSnakeReachedTheEnds(){
-        if (this.SNAKE_CONTROLLER.snakeHead.getLayoutY()<18) {
-            this.SNAKE_CONTROLLER.snakeHead.setLayoutY(this.SNAKE_CONTROLLER.snakeHead.getLayoutY()-18);
-            this.SNAKE_ANIMATION_MAKER.boolToStopTheGame=false;
-        }
-        if (this.SNAKE_CONTROLLER.snakeHead.getLayoutY()+30>this.SNAKE_MAIN.SCENE.getHeight()) {
-            this.SNAKE_CONTROLLER.snakeHead.setLayoutY(this.SNAKE_CONTROLLER.snakeHead.getLayoutY()+30);
-            this.SNAKE_ANIMATION_MAKER.boolToStopTheGame=false;
-        }
-        if (this.SNAKE_CONTROLLER.snakeHead.getLayoutX()<18) {
-            this.SNAKE_CONTROLLER.snakeHead.setLayoutX(this.SNAKE_CONTROLLER.snakeHead.getLayoutX()-18);
-            this.SNAKE_ANIMATION_MAKER.boolToStopTheGame=false;
-        }
-        if (this.SNAKE_CONTROLLER.snakeHead.getLayoutX()+30>this.SNAKE_MAIN.SCENE.getWidth()) {
-            this.SNAKE_CONTROLLER.snakeHead.setLayoutX(this.SNAKE_CONTROLLER.snakeHead.getLayoutX()+30);
-            this.SNAKE_ANIMATION_MAKER.boolToStopTheGame=false;
-        }
-        if (!this.SNAKE_ANIMATION_MAKER.boolToStopTheGame) {
-            this.setTheLinePosition();
-            this.displaySnakeFlexibly();
-        }
-    }
-    private void makingSnakeHeadTouchTheWalls(){
-        while (true){
-            if (this.SNAKE_ANIMATION_MAKER.yDirection==0) {
-                this.SNAKE_CONTROLLER.snakeHead.setLayoutX(this.SNAKE_CONTROLLER.snakeHead.getLayoutX()+1);
-            } else{
-                this.SNAKE_CONTROLLER.snakeHead.setLayoutY(this.SNAKE_CONTROLLER.snakeHead.getLayoutY()+1);
-            }
 
+        double minY=0;
+        double minX=0;
+        double maxY=this.SNAKE_MAIN.SCENE.getHeight()-this.SNAKE_CONTROLLER.snakeHead.getHeight();
+        double maxX=this.SNAKE_MAIN.SCENE.getWidth()-this.SNAKE_CONTROLLER.snakeHead.getWidth();
+
+
+        if (this.SNAKE_CONTROLLER.snakeHead.getLayoutY()<minY) {
+            this.SNAKE_ANIMATION_MAKER.boolToStopTheGame=false;
         }
+        if (this.SNAKE_CONTROLLER.snakeHead.getLayoutY()>maxY) {
+            this.SNAKE_ANIMATION_MAKER.boolToStopTheGame=false;
+        }
+        if (this.SNAKE_CONTROLLER.snakeHead.getLayoutX()<minX) {
+            this.SNAKE_ANIMATION_MAKER.boolToStopTheGame=false;
+        }
+        if (this.SNAKE_CONTROLLER.snakeHead.getLayoutX()>maxX) {
+            this.SNAKE_ANIMATION_MAKER.boolToStopTheGame=false;
+        }
+
     }
     private void checkIfSnakeCollidesWithItself(){
         for (int i=1;i<this.SNAKE_ANIMATION_MAKER.snakeArr.size()-1;i++){
