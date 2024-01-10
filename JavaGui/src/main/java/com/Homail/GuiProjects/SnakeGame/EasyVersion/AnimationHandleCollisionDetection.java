@@ -1,7 +1,4 @@
 package com.Homail.GuiProjects.SnakeGame.EasyVersion;
-import com.Homail.GuiProjects.SnakeGame.EasyVersion.GameRestartOperations;
-import com.Homail.GuiProjects.SnakeGame.EasyVersion.PutSnakeOnAnimationAndHandleFood;
-import com.Homail.GuiProjects.SnakeGame.EasyVersion.SnakeFxmlController;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.scene.paint.Color;
@@ -18,19 +15,19 @@ public class AnimationHandleCollisionDetection {
         this.snakeFxmlController=snakeFxmlController;
         this.putSnakeOnAnimationAndHandleFood = putSnakeOnAnimationAndHandleFood;
         this.gameRestartOperations=new GameRestartOperations(snakeFxmlController,putSnakeOnAnimationAndHandleFood,this);
+        this.moveTheCircleNamedToCheckIfSnakeCollidesItselfWithTheSnake();
     }
     // METHODS
     protected void handleAnimation(){
         if (this.putSnakeOnAnimationAndHandleFood.startAnimation && this.putSnakeOnAnimationAndHandleFood.stopAnimation) {
-            displaySnakeFlexibly();
-            this.snakeFxmlController.snakeHead.setLayoutX(this.snakeFxmlController.snakeHead.getLayoutX() + this.putSnakeOnAnimationAndHandleFood.xDirection);
-            this.snakeFxmlController.snakeHead.setLayoutY(this.snakeFxmlController.snakeHead.getLayoutY() + this.putSnakeOnAnimationAndHandleFood.yDirection);
-            this.checkIfSnakeEatsFood();
+            this.displaySnakeFlexibly();
             this.checkIfSnakeReachedTheWalls();
-            this.snakeEyesSettings();
+            this.snakeEyesAndCircleSettings();
+            this.checkIfSnakeEatsFood();
             this.checkIfSnakeCollidesWithItself();
-            this.makeTheNotAllowUserBoolTrue();
+
         }
+        this.makeTheNotAllowUserBoolTrue();
     }
     private void makeTheNotAllowUserBoolTrue(){
 
@@ -39,12 +36,13 @@ public class AnimationHandleCollisionDetection {
     // Collide Settings
     private void checkIfSnakeCollidesWithItself(){
         for (int i = 1; i<this.putSnakeOnAnimationAndHandleFood.snakeArr.size(); i++){
-            if (this.snakeFxmlController.snakeHead.getBoundsInParent().intersects(this.putSnakeOnAnimationAndHandleFood.snakeArr.get(i).getBoundsInParent())){
+            if (this.snakeFxmlController.circleToCheckIfSnakeCollidesItself.getBoundsInParent().intersects(this.putSnakeOnAnimationAndHandleFood.snakeArr.get(i).getBoundsInParent())){
                  this.putSnakeOnAnimationAndHandleFood.stopAnimation=false;
                  this.putSnakeOnAnimationAndHandleFood.startAnimation=false;
                  this.gameRestartOperations.boolToRestartTheGame=false;
-                 changeMainPageText();
-                 putEyesAtTheCollidedPlace();
+                 this.changeMainPageText();
+                 this.putEyesAtTheCollidedPlace();
+                 break;
             }
         }
     }
@@ -55,6 +53,7 @@ public class AnimationHandleCollisionDetection {
     private void putEyesAtTheCollidedPlace(){
         this.snakeFxmlController.snakeHead.toFront();
         this.snakeFxmlController.hboxForEyes.toFront();
+        this.snakeFxmlController.circleToCheckIfSnakeCollidesItself.toFront();
         this.snakeFxmlController.snakeHead.setFill(Color.valueOf("#ff0000"));
     }
     // Others
@@ -73,6 +72,12 @@ public class AnimationHandleCollisionDetection {
             currentSegment.setLayoutX(nextSegment.getLayoutX());
             currentSegment.setLayoutY(nextSegment.getLayoutY());
         }
+        this.snakeFxmlController.snakeHead.setLayoutX(this.snakeFxmlController.snakeHead.getLayoutX() + this.putSnakeOnAnimationAndHandleFood.xDirection);
+        this.snakeFxmlController.snakeHead.setLayoutY(this.snakeFxmlController.snakeHead.getLayoutY() + this.putSnakeOnAnimationAndHandleFood.yDirection);
+    }
+    protected void moveTheCircleNamedToCheckIfSnakeCollidesItselfWithTheSnake(){
+        this.snakeFxmlController.circleToCheckIfSnakeCollidesItself.setLayoutY(this.snakeFxmlController.snakeHead.getLayoutY()+13);
+        this.snakeFxmlController.circleToCheckIfSnakeCollidesItself.setLayoutX(this.snakeFxmlController.snakeHead.getLayoutX()+13.5);
     }
     private void checkIfSnakeEatsFood(){
         if (this.snakeFxmlController.snakeHead.getBoundsInParent().intersects(this.snakeFxmlController.food.getBoundsInParent())){
@@ -88,7 +93,6 @@ public class AnimationHandleCollisionDetection {
             this.setScoresOnScreen();
         }
     }
-
     private void increaseCurrentScoreForSpecialFood(){
          if (this.snakeFxmlController.food.getFill()==Color.GOLD){
              this.putSnakeOnAnimationAndHandleFood.currentScoreCount+=4;
@@ -104,23 +108,24 @@ public class AnimationHandleCollisionDetection {
         }
     }
     private void checkIfSnakeReachedTheWalls(){
-        if (this.snakeFxmlController.snakeHead.getBoundsInParent().getMinY()<-5) {
+        if (this.snakeFxmlController.snakeHead.getLayoutY()<-5) {
             this.snakeFxmlController.snakeHead.setLayoutY(this.snakeFxmlController.mainBoard.getHeight()-25);
         }
-        else if (this.snakeFxmlController.snakeHead.getBoundsInParent().getMaxY()>this.snakeFxmlController.mainBoard.getHeight()+5) {
+        else if (this.snakeFxmlController.snakeHead.getLayoutY()>this.snakeFxmlController.mainBoard.getHeight()-20) {
             this.snakeFxmlController.snakeHead.setLayoutY(0);
         }
-        else if (this.snakeFxmlController.snakeHead.getBoundsInParent().getMinX()<-5) {
+        else if (this.snakeFxmlController.snakeHead.getLayoutX()<-5) {
             this.snakeFxmlController.snakeHead.setLayoutX(this.snakeFxmlController.mainBoard.getWidth()-25);
         }
-        else if (this.snakeFxmlController.snakeHead.getBoundsInParent().getMaxX()>this.snakeFxmlController.mainBoard.getWidth()+5) {
+        else if (this.snakeFxmlController.snakeHead.getLayoutX()>this.snakeFxmlController.mainBoard.getWidth()-20) {
             this.snakeFxmlController.snakeHead.setLayoutX(0);
         }
     }
-    private void snakeEyesSettings(){
+    private void snakeEyesAndCircleSettings(){
         if (this.putSnakeOnAnimationAndHandleFood.xDirection==0) this.snakeFxmlController.hboxForEyes.setRotate(0);
         else if (this.putSnakeOnAnimationAndHandleFood.yDirection==0) this.snakeFxmlController.hboxForEyes.setRotate(90);
         this.snakeFxmlController.hboxForEyes.setLayoutX(this.snakeFxmlController.snakeHead.getLayoutX());
         this.snakeFxmlController.hboxForEyes.setLayoutY(this.snakeFxmlController.snakeHead.getLayoutY());
+        this.moveTheCircleNamedToCheckIfSnakeCollidesItselfWithTheSnake();
     }
 }

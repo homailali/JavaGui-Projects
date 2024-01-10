@@ -7,12 +7,12 @@ import javafx.util.Duration;
 public class AnimationHandler {
     // Fields
     private final SnakeController SNAKE_CONTROLLER;
-    private final SnakeMain SNAKE_MAIN;
+    private final SnakeMainMedium SNAKE_MAIN;
     private final SnakeAnimationMaker SNAKE_ANIMATION_MAKER;
     // Constructor
-    public AnimationHandler(SnakeController snakeController, SnakeMain snakeMain, SnakeAnimationMaker snakeAnimationMaker) {
+    public AnimationHandler(SnakeController snakeController, SnakeMainMedium snakeMainMedium, SnakeAnimationMaker snakeAnimationMaker) {
         this.SNAKE_CONTROLLER = snakeController;
-        this.SNAKE_MAIN = snakeMain;
+        this.SNAKE_MAIN = snakeMainMedium;
         this.SNAKE_ANIMATION_MAKER = snakeAnimationMaker;
     }
     // Methods
@@ -30,15 +30,12 @@ public class AnimationHandler {
         }
         this.SNAKE_ANIMATION_MAKER.boolToNotAllowUserPressTwoKeysAtATime = true;
     }
-
-
-
     private void moveTheMainBoardTextAndScoreTextToTop(){
         this.SNAKE_CONTROLLER.scoreText.toFront();
         this.SNAKE_CONTROLLER.mainBoardText.toFront();
     }
     private void setScoreAtCenter(){
-        this.SNAKE_CONTROLLER.scoreText.setLayoutX(this.SNAKE_MAIN.SCENE.getWidth()/2-285);
+        this.SNAKE_CONTROLLER.scoreText.setLayoutX(this.SNAKE_MAIN.SCENE.getWidth()/2-283);
         this.SNAKE_CONTROLLER.scoreText.setLayoutY(this.SNAKE_MAIN.SCENE.getHeight()/2+37);
     }
     private void setMainBoardTextAtCenter(){
@@ -59,14 +56,14 @@ public class AnimationHandler {
         this.SNAKE_CONTROLLER.snakeHead.setLayoutY(this.SNAKE_CONTROLLER.snakeHead.getLayoutY()+this.SNAKE_ANIMATION_MAKER.yDirection);
         this.setTheLinePosition();
     }
-    private void setTheLinePosition(){
+    protected void setTheLinePosition(){
         this.SNAKE_CONTROLLER.snakeHeadLine.setLayoutX(this.SNAKE_CONTROLLER.snakeHead.getLayoutX()-8);
         this.SNAKE_CONTROLLER.snakeHeadLine.setLayoutY(this.SNAKE_CONTROLLER.snakeHead.getLayoutY()-55);
         this.rotateTheLine();
     }
     private void increaseScore(){
         this.SNAKE_ANIMATION_MAKER.scoreCount++;
-        this.SNAKE_CONTROLLER.scoreText.setText(String.valueOf(this.SNAKE_ANIMATION_MAKER.scoreCount));
+
     }
     private void rotateTheLine(){
         if(this.SNAKE_ANIMATION_MAKER.xDirection==0) {
@@ -99,13 +96,29 @@ public class AnimationHandler {
         if (this.SNAKE_CONTROLLER.snakeHead.getBoundsInParent().intersects(this.SNAKE_CONTROLLER.food.getBoundsInParent())){
             this.increaseScore();
             this.increaseSpeed();
+            this.throwSpecialFood();
             this.addNewSegmentToSnake();
+            this.setScoreCountAsTextOnScreen();
             this.SNAKE_ANIMATION_MAKER.putFoodRandomly();
+        }
+    }
+    protected void setScoreCountAsTextOnScreen(){
+
+        this.SNAKE_CONTROLLER.scoreText.setText(String.valueOf(this.SNAKE_ANIMATION_MAKER.scoreCount));
+    }
+    private void throwSpecialFood(){
+        if (this.SNAKE_ANIMATION_MAKER.scoreCount==this.SNAKE_ANIMATION_MAKER.specialFoodCountRange){
+            this.SNAKE_ANIMATION_MAKER.scoreCount+=5;
+            this.SNAKE_ANIMATION_MAKER.specialFoodCountRange+=15;
+        }
+        if (this.SNAKE_ANIMATION_MAKER.scoreCount+1==this.SNAKE_ANIMATION_MAKER.specialFoodCountRange){
+            this.SNAKE_CONTROLLER.food.setFill(Color.valueOf("#6D2E46"));
+        } else {
+            this.SNAKE_CONTROLLER.food.setFill(Color.valueOf("#57A773"));
         }
     }
     private void addNewSegmentToSnake(){
         Rectangle rectangle=new Rectangle(25,25, Color.WHITE);
-        rectangle.setStroke(Color.BLACK);
         this.SNAKE_ANIMATION_MAKER.snakeArr.add(rectangle);
         this.SNAKE_CONTROLLER.mainBoard.getChildren().add(rectangle);
         this.SNAKE_ANIMATION_MAKER.snakeArr.getLast().setVisible(false);
@@ -114,8 +127,8 @@ public class AnimationHandler {
 
         double minY=0;
         double minX=0;
-        double maxY=this.SNAKE_MAIN.SCENE.getHeight()-this.SNAKE_CONTROLLER.snakeHead.getHeight();
-        double maxX=this.SNAKE_MAIN.SCENE.getWidth()-this.SNAKE_CONTROLLER.snakeHead.getWidth();
+        double maxY=this.SNAKE_MAIN.SCENE.getHeight()-(this.SNAKE_CONTROLLER.snakeHead.getHeight());
+        double maxX=this.SNAKE_MAIN.SCENE.getWidth()-(this.SNAKE_CONTROLLER.snakeHead.getWidth());
 
 
         if (this.SNAKE_CONTROLLER.snakeHead.getLayoutY()<minY) {

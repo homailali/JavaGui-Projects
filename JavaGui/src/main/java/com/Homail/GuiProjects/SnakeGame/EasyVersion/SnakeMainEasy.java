@@ -7,8 +7,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-public class SnakeMain extends Application {
-    // Changed
+public class SnakeMainEasy extends Application {
     // Fields
     private FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("/com/Homail/GuiProjects/SnakeGame/Easy/SnakeFxmlFile.fxml"));
     private Parent parent=fxmlLoader.load();
@@ -18,7 +17,7 @@ public class SnakeMain extends Application {
     private PutSnakeOnAnimationAndHandleFood putSnakeOnAnimationAndHandleFood =new PutSnakeOnAnimationAndHandleFood(snakeFxmlController);
     private SceneEventHandler sceneEventHandler=new SceneEventHandler(this,snakeFxmlController, putSnakeOnAnimationAndHandleFood);
     // Constructor
-    public SnakeMain() throws IOException {
+    public SnakeMainEasy() throws IOException {
     }
     // METHODS
     public void start(Stage stage){
@@ -32,9 +31,9 @@ public class SnakeMain extends Application {
     }
     private void stageSettings(){
         this.stage.setScene(this.scene);
-        this.stage.setResizable(true);
-        this.stage.setTitle("Snake Game");
-        this.stage.getIcons().add(new Image("snake.png"));
+        this.stage.setResizable(false);
+        this.stage.setTitle("Easy Snake Game");
+        this.stage.getIcons().add(new Image("snakeEasy.png"));
         this.stage.setAlwaysOnTop(true);
         this.stage.show();
     }

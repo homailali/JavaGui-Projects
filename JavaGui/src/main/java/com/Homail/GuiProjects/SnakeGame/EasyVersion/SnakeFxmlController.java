@@ -1,12 +1,16 @@
 package com.Homail.GuiProjects.SnakeGame.EasyVersion;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
-public class SnakeFxmlController {
+
+import java.net.URL;
+import java.util.ResourceBundle;
+public class SnakeFxmlController implements Initializable {
     @FXML
     protected Text currentScore;
     @FXML
@@ -31,4 +35,12 @@ public class SnakeFxmlController {
     protected Text mainPageText;
     @FXML
     protected Pane theContainer;
+    @FXML
+    protected Circle circleToCheckIfSnakeCollidesItself;
+    public void initialize(URL url,ResourceBundle resourceBundle){
+        this.thingsToPutAtFront();
+    }
+    private void thingsToPutAtFront(){
+        this.theContainer.toFront();
+    }
 }

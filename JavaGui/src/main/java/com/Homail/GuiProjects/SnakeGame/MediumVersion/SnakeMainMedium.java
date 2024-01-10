@@ -3,9 +3,10 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import java.io.IOException;
-public class SnakeMain extends Application {
+public class SnakeMainMedium extends Application {
     //Fields
     private final FXMLLoader FXML_LOADER=new FXMLLoader(getClass().getResource("/com/Homail/GuiProjects/SnakeGame/Medium/SnakeMediumFxml.fxml"));
     private final Parent PARENT=FXML_LOADER.load();
@@ -15,7 +16,7 @@ public class SnakeMain extends Application {
     private final SnakeAnimationMaker SNAKE_ANIMATION_MAKER=new SnakeAnimationMaker(this, this.SNAKE_CONTROLLER);
     private final HandleSnakeMovement HANDLE_SNAKE_MOVEMENT=new HandleSnakeMovement(SNAKE_CONTROLLER,SNAKE_ANIMATION_MAKER);
     // Constructor
-    public SnakeMain() throws IOException {
+    public SnakeMainMedium() throws IOException {
     }
     // Methods
     public void start(Stage primaryStage){
@@ -30,6 +31,7 @@ public class SnakeMain extends Application {
     private void stageSettings(){
         this.STAGE.setScene(SCENE);
         this.STAGE.setTitle("Medium Snake Game");
+        this.STAGE.getIcons().add(new Image("snakeMedium.png"));
         this.STAGE.show();
     }
     public static void main(String[] args) {

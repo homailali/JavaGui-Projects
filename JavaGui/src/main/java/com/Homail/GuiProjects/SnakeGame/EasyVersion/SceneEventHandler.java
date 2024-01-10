@@ -4,12 +4,12 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 public class SceneEventHandler implements EventHandler<KeyEvent>{
     // Fields
-    private SnakeMain snakeMain;
+    private SnakeMainEasy snakeMainEasy;
     private PutSnakeOnAnimationAndHandleFood putSnakeOnAnimationAndHandleFood;
     private SnakeFxmlController snakeFxmlController;
     // Constructor
-    public SceneEventHandler(SnakeMain snakeMain, SnakeFxmlController snakeFxmlController, PutSnakeOnAnimationAndHandleFood putSnakeOnAnimationAndHandleFood){
-        this.snakeMain=snakeMain;
+    public SceneEventHandler(SnakeMainEasy snakeMainEasy, SnakeFxmlController snakeFxmlController, PutSnakeOnAnimationAndHandleFood putSnakeOnAnimationAndHandleFood){
+        this.snakeMainEasy = snakeMainEasy;
         this.putSnakeOnAnimationAndHandleFood = putSnakeOnAnimationAndHandleFood;
         this.snakeFxmlController=snakeFxmlController;
     }

@@ -8,10 +8,10 @@
 
 <AnchorPane fx:id="mainBoard" minHeight="570.0" minWidth="570.0" prefHeight="570.0" prefWidth="570.0" style="-fx-background-color: #005e94;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Homail.GuiProjects.SnakeGame.MediumVersion.SnakeController">
    <children>
-      <Rectangle fx:id="food" arcHeight="5.0" arcWidth="5.0" fill="#c5bb07" height="25.0" layoutX="119.0" layoutY="131.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke-width: 0; -fx-arc-width: 0; -fx-arc-height: 0;" width="25.0" />
-      <Rectangle fx:id="snakeHead" arcHeight="5.0" arcWidth="5.0" fill="RED" height="25.0" layoutX="273.0" layoutY="273.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke-width: 0; -fx-arc-width: 0; -fx-arc-height: 0; -fx-stroke: red;" width="25.0" />
+      <Rectangle fx:id="food" arcHeight="5.0" arcWidth="5.0" fill="#ffa800" height="25.0" layoutX="119.0" layoutY="131.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke-width: 0; -fx-arc-width: 0; -fx-arc-height: 0; -fx-fill: #57A773;" width="25.0" />
+      <Rectangle fx:id="snakeHead" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" layoutX="273.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke-width: 0; -fx-arc-width: 0; -fx-arc-height: 0; -fx-stroke: red;" width="25.0" />
       <Line fx:id="snakeHeadLine" endX="25.333343505859375" endY="66.33334350585938" layoutX="264.0" layoutY="218.0" startX="16.000030517578125" startY="66.33334350585938" stroke="WHITE" strokeWidth="5.0" />
-      <Text fx:id="scoreText" fill="#00000036" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="570.0">
+      <Text fx:id="scoreText" fill="#00000036" layoutX="1.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="570.0">
          <font>
             <Font name="Goudy Stout" size="96.0" />
          </font>

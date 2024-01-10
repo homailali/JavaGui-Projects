@@ -32,7 +32,8 @@ public class GameRestartOperations {
         this.makeMainScreenTextDisappear();
         this.removingSnakesFromSnakeArrAndBoard();
         this.placeSnakeAtCenterAndMakeItMoveXWise();
-        this.resetSnakeEyes();
+        this.resetSnakeEyesAndCollisonDetectCircle();
+
     }
     private void resetSpecialFoodSettings(){
         this.putSnakeOnAnimationAndHandleFood.rangeForSpecialFood=10;
@@ -63,9 +64,10 @@ public class GameRestartOperations {
         this.putSnakeOnAnimationAndHandleFood.stopAnimation=false;
         this.snakeFxmlController.startingPage.setVisible(true);
     }
-    private void resetSnakeEyes(){
+    private void resetSnakeEyesAndCollisonDetectCircle(){
         this.snakeFxmlController.hboxForEyes.setLayoutX(this.snakeFxmlController.snakeHead.getLayoutX());
         this.snakeFxmlController.hboxForEyes.setLayoutY(this.snakeFxmlController.snakeHead.getLayoutY());
+        this.animationHandleCollisionDetection.moveTheCircleNamedToCheckIfSnakeCollidesItselfWithTheSnake();
     }
     private void changeStartPageText(){
 

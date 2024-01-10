@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Random;
 public class SnakeAnimationMaker {
     // Fields
+    protected int specialFoodCountRange=10;
     protected int scoreCount=0;
     protected boolean boolToStopTheGame=true;
     protected boolean boolToNotAllowUserPressTwoKeysAtATime=true;
@@ -14,15 +15,15 @@ public class SnakeAnimationMaker {
     protected int distanceToCover=24;
     protected int xDirection;
     protected int yDirection;
-    protected final SnakeMain SNAKE_MAIN;
+    protected final SnakeMainMedium SNAKE_MAIN;
     private final SnakeController SNAKE_CONTROLLER;
-    private final AnimationHandler ANIMATION_HANDLER;
+    protected final AnimationHandler ANIMATION_HANDLER;
     private final Random RANDOM=new Random();
     protected  ArrayList<Rectangle> snakeArr=new ArrayList<>();
     protected Timeline timeline;
     // Constructor
-    protected SnakeAnimationMaker(SnakeMain snakeMain, SnakeController snakeController){
-        this.SNAKE_MAIN= snakeMain;
+    protected SnakeAnimationMaker(SnakeMainMedium snakeMainMedium, SnakeController snakeController){
+        this.SNAKE_MAIN= snakeMainMedium;
         this.SNAKE_CONTROLLER= snakeController;
         ANIMATION_HANDLER=new AnimationHandler(this.SNAKE_CONTROLLER, this.SNAKE_MAIN,this);
 
@@ -33,8 +34,10 @@ public class SnakeAnimationMaker {
         this.putFoodRandomly();
         this.snakeHeadSettings();
         this.placeSnakeHeadAtCenter();
+        this.ANIMATION_HANDLER.setScoreCountAsTextOnScreen();
     }
     private void snakeHeadSettings(){
+
         this.snakeArr.add(this.SNAKE_CONTROLLER.snakeHead);
     }
     private void makeAnimation(){

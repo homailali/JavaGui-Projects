@@ -13,7 +13,7 @@ public class PutSnakeOnAnimationAndHandleFood {
     protected double snakeSpeed=150;
     protected int currentScoreCount;
     protected int highestScoreCount;
-    protected int coverDistance=27;
+    protected int coverDistance=25;
     protected int yDirection=0;
     protected int xDirection=0;
     protected boolean startAnimation=false;
