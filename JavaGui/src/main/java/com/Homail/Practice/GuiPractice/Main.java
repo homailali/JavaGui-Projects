@@ -1,59 +1,67 @@
 package com.Homail.Practice.GuiPractice;
-import com.Homail.GuiProjects.SnakeGame.EasyVersion.SnakeMainEasy;
-import com.Homail.GuiProjects.SnakeGame.MediumVersion.SnakeMainMedium;
 import javafx.application.Application;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main extends Application {
-    private Button easy=new Button("Easy");
-    private Button medium=new Button("Medium");
-    public void start(Stage primaryStage){
-        easy.setOnMouseClicked(this::buttonHandler);
-        medium.setOnMouseClicked(this::buttonHandler);
 
+    private GridPane gridPane;
+    private Circle circle;
+    private int initialColumn;
 
-        HBox hBox=new HBox(10);
-        hBox.getChildren().add(easy);
-        hBox.getChildren().add(medium);
-        hBox.setAlignment(Pos.CENTER);
-        Scene scene=new Scene(hBox,400,400);
+    @Override
+    public void start(Stage primaryStage) {
+        gridPane = new GridPane();
+        gridPane.setStyle("-fx-background-color: white;"); // Set background color
+
+        circle = createMovableCircle();
+        gridPane.add(circle, 0, 0);
+
+        Scene scene = new Scene(gridPane, 400, 400);
+        setupMouseHandlers();
+
+        primaryStage.setTitle("Drag Circle in GridPane");
         primaryStage.setScene(scene);
         primaryStage.show();
-
     }
 
-
-    private List<Integer> doStuff(){
-        return new ArrayList<>();
+    private Circle createMovableCircle() {
+        Circle circle = new Circle(20, Color.BLUE);
+        circle.setStroke(Color.BLACK);
+        return circle;
     }
 
-    private void buttonHandler(MouseEvent mouseEvent){
-        if (mouseEvent.getSource()==easy){
-            launchApplications(SnakeMainEasy.class);
-        } else if (mouseEvent.getSource()==medium){
-            launchApplications(SnakeMainMedium.class);
-        }
+    private void setupMouseHandlers() {
+        circle.setOnMousePressed(this::handleMousePressed);
+        circle.setOnMouseDragged(this::handleMouseDragged);
+        circle.setOnMouseReleased(this::handleMouseReleased);
     }
 
-    private void launchApplications(Class<? extends Application> snakeGame){
-        try {
-            Stage stage = new Stage();
-            snakeGame.newInstance().start(stage);
-        } catch (Exception exception){
-            System.out.println("Exception thrown");
-        }
+    private void handleMousePressed(MouseEvent event) {
+        initialColumn = GridPane.getColumnIndex(circle);
+    }
+
+    private void handleMouseDragged(MouseEvent event) {
+        circle.setCenterX(event.getX());
+    }
+
+    private void handleMouseReleased(MouseEvent event) {
+        int releasedColumn = calculateReleasedColumn(event.getX());
+        System.out.println("Circle released at column: " + releasedColumn);
+    }
+
+    private int calculateReleasedColumn(double x) {
+        // Assuming each column width is 50 units
+        int columnWidth = 50;
+        int releasedColumn = initialColumn + (int) (x / columnWidth);
+        return Math.max(0, Math.min(gridPane.getColumnConstraints().size() - 1, releasedColumn));
     }
 
     public static void main(String[] args) {
         launch(args);
-
     }
 }

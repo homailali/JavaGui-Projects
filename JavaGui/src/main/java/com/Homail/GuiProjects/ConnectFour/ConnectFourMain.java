@@ -13,12 +13,13 @@ public class ConnectFourMain extends Application {
     private final Scene SCENE=new Scene(PARENT);
     private final Stage STAGE=new Stage();
     private final ConnectFourController CONNECT_FOUR_CONTROLLER=FXMLLOADER.getController();
-    private final ConnectFourLogic CONNECT_FOUR_LOGIC=new ConnectFourLogic(this,this.CONNECT_FOUR_CONTROLLER);
+    private final ConnectFourBallsThrower CONNECT_FOUR_BallsThrower=new ConnectFourBallsThrower(this,this.CONNECT_FOUR_CONTROLLER);
     // Constructor
     public ConnectFourMain() throws IOException {
     }
     // Methods
     public void start(Stage primaryStage){
+        this.CONNECT_FOUR_CONTROLLER.passConnectFourLogicInstance(this.CONNECT_FOUR_BallsThrower);
         this.sceneSettings();
         this.stageSettings();
     }
