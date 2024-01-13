@@ -1,20 +1,17 @@
 package com.Homail.GuiProjects.ConnectFour;
-import javafx.geometry.Point2D;
-import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
 
 public class ConnectFourBallsThrower {
     // Fields
     protected int column;
     private Circle circle;
     protected int countForPlayerColor;
+    protected int toIdentifyTheWinner;
     protected boolean boolToKeepTheGameRunning;
     private boolean boolToStopMovingTheCircle=true;
     private final ConnectFourMain CONNECT_FOUR_MAIN;
@@ -58,11 +55,10 @@ public class ConnectFourBallsThrower {
     }
     protected void releaseHandler(MouseEvent mouseEvent){
         if (mouseEvent.getButton()==MouseButton.PRIMARY && this.boolToKeepTheGameRunning){
-            this.increaseTheCount();
             this.fillTheColumnAfterMouseRelease();
-            this.CONNECT_FOUR_WINNER_CHECKER.mainOfConnect4Winner();
             this.SIDE_SCREEN_MANAGER.thingsToCallAfterButtonRelease();
             this.CONNECT_FOUR_CONTROLLER.placeToThrowBalls.getChildren().remove(this.circle);
+            this.CONNECT_FOUR_WINNER_CHECKER.mainOfConnect4Winner();
         }
     }
 
@@ -84,7 +80,10 @@ public class ConnectFourBallsThrower {
     // Drag Settings
     private int updateTheColumn(MouseEvent mouseEvent){
         double columnWidth = 56;
-        return (int) (mouseEvent.getX() / columnWidth);
+        int column=(int) (mouseEvent.getX() / columnWidth);
+        if (column>5) column=5;
+        else if (column<0) column=0;
+        return column;
     }
     private void checkIfCircleCrossedTheLimits(MouseEvent mouseEvent){
         if (mouseEvent.getX() < 0 || mouseEvent.getX() > 295) {
@@ -100,12 +99,15 @@ public class ConnectFourBallsThrower {
         this.countForPlayerColor++;
     }
     private void fillTheColumnAfterMouseRelease(){
+        boolean bool=false;
         for (int i=this.CIRCLE_ARR.length-1;i>=0;i--){
             if (this.CIRCLE_ARR[i][this.column].getFill()==this.BOARD_CIRCLES_COLOR){
                 this.CIRCLE_ARR[i][this.column].setFill(this.countForPlayerColor%2==0?this.PLAYER_ONE_COLOR:this.PLAYER_TWO_COLOR);
+                bool=true;
                 break;
             }
         }
+        if (bool) this.increaseTheCount();
     }
 
     // Filling the circle arr

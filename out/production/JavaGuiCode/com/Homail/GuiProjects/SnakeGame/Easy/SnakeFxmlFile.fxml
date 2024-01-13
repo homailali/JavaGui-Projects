@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="theContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="600.0" style="-fx-background-color: #595f43;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Homail.GuiProjects.SnakeGame.EasyVersion.SnakeFxmlController">
+   <children>
+      <Text fx:id="currentScore" layoutX="45.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #abb78a; -fx-font-weight: bold;" text="Current-Score:0" textAlignment="CENTER" wrappingWidth="251.47006225585938">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="highestScore" layoutX="309.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #abb78a; -fx-font-weight: bold;" text="Highest-Score:0" textAlignment="CENTER" wrappingWidth="245.47006225585938">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <AnchorPane fx:id="mainBoard" layoutX="50.0" layoutY="60.0" maxHeight="500.0" maxWidth="500.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #abb78a; -fx-background-radius: 1;">
+         <children>
+            <Rectangle fx:id="food" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="26.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke: #999; -fx-stroke-width: 5; -fx-arc-height: 0; -fx-arc-width: 0;" width="26.0" />
+            <Rectangle fx:id="snakeHead" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="26.0" layoutX="242.0" layoutY="242.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #414141; -fx-stroke-width: 0; -fx-arc-height: 0; -fx-arc-width: 0;" styleClass="snake" width="26.0" />
+            <HBox fx:id="hboxForEyes" layoutX="242.0" layoutY="242.0" prefHeight="26.0" prefWidth="26.0" rotate="90.0" spacing="5.0">
+               <children>
+                  <Circle fx:id="eye2" fill="WHITE" radius="3.0" stroke="WHITE" strokeType="INSIDE" translateX="4.0" translateY="9.0" />
+                  <Circle fx:id="eye1" fill="WHITE" radius="3.0" stroke="WHITE" strokeType="INSIDE" translateX="4.0" translateY="9.0" />
+               </children>
+            </HBox>
+            <Circle fx:id="circleToCheckIfSnakeCollidesItself" fill="DODGERBLUE" layoutX="255.0" layoutY="255.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="startingPage" layoutX="50.0" layoutY="60.0" maxHeight="500.0" maxWidth="500.0" prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #abb78a; -fx-background-radius: 1;">
+         <children>
+            <ImageView fitHeight="286.0" fitWidth="311.0" layoutX="112.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../SnakeImages/snake-game-ai-gen.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="startPageText" layoutX="57.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #595f43; -fx-font-weight: bold;" text="Press enter button to play the Game" textAlignment="CENTER" wrappingWidth="395.4700622558594">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text fx:id="mainPageText" layoutX="45.0" layoutY="600.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #abb78a; -fx-font-weight: bold;" text="To start press one ← ↓ ↑ →" textAlignment="CENTER" visible="false" wrappingWidth="510.0">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

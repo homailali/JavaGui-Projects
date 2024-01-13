@@ -5,11 +5,13 @@ public class ConnectFourWinnerChecker {
     private final ConnectFourMain CONNECT_FOUR_MAIN;
     private final ConnectFourController CONNECT_FOUR_CONTROLLER;
     private final ConnectFourBallsThrower CONNECT_FOUR_BALLS_THROWER;
+    private final EndGameSettings END_GAME_SETTINGS;
     // Constructor
     public ConnectFourWinnerChecker(ConnectFourMain connectFourMain, ConnectFourController connectFourController, ConnectFourBallsThrower connectfourballsthrower) {
-        CONNECT_FOUR_MAIN = connectFourMain;
-        CONNECT_FOUR_CONTROLLER = connectFourController;
-        CONNECT_FOUR_BALLS_THROWER = connectfourballsthrower;
+        this.CONNECT_FOUR_MAIN = connectFourMain;
+        this.CONNECT_FOUR_CONTROLLER = connectFourController;
+        this.CONNECT_FOUR_BALLS_THROWER = connectfourballsthrower;
+        this.END_GAME_SETTINGS=new EndGameSettings(this.CONNECT_FOUR_MAIN,this.CONNECT_FOUR_CONTROLLER,this.CONNECT_FOUR_BALLS_THROWER,this);
     }
     // Methods
     protected void mainOfConnect4Winner(){
@@ -23,11 +25,29 @@ public class ConnectFourWinnerChecker {
                     this.checkingForTogetherBalls(this.CONNECT_FOUR_BALLS_THROWER.PLAYER_ONE_COLOR,i,j);
                 } else if (this.CONNECT_FOUR_BALLS_THROWER.CIRCLE_ARR[i][j].getFill()==this.CONNECT_FOUR_BALLS_THROWER.PLAYER_TWO_COLOR){
                     this.checkingForTogetherBalls(this.CONNECT_FOUR_BALLS_THROWER.PLAYER_TWO_COLOR,i,j);
+                    if (!this.CONNECT_FOUR_BALLS_THROWER.boolToKeepTheGameRunning) this.CONNECT_FOUR_BALLS_THROWER.toIdentifyTheWinner=1;
                 }
             }
             if (!this.CONNECT_FOUR_BALLS_THROWER.boolToKeepTheGameRunning) break;
         }
-
+        this.checkIfMatchDrawn();
+        if (!this.CONNECT_FOUR_BALLS_THROWER.boolToKeepTheGameRunning){
+            this.END_GAME_SETTINGS.endGameMain();
+        }
+    }
+    private void checkIfMatchDrawn(){
+        if (this.CONNECT_FOUR_BALLS_THROWER.boolToKeepTheGameRunning) {
+            boolean bool = false;
+            for (int i = 0; i < this.CONNECT_FOUR_BALLS_THROWER.CIRCLE_ARR.length; i++) {
+                for (int j = 0; j < this.CONNECT_FOUR_BALLS_THROWER.CIRCLE_ARR[i].length; j++) {
+                    if (this.CONNECT_FOUR_BALLS_THROWER.CIRCLE_ARR[i][j].getFill() == Color.WHITE) bool = true;
+                }
+            }
+            if (!bool) {
+                this.CONNECT_FOUR_BALLS_THROWER.boolToKeepTheGameRunning = false;
+                this.CONNECT_FOUR_BALLS_THROWER.toIdentifyTheWinner = 2;
+            }
+        }
     }
     private void checkingForTogetherBalls(Color color,int row,int column){
        if (this.CONNECT_FOUR_BALLS_THROWER.boolToKeepTheGameRunning){

@@ -6,17 +6,17 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="299.0" prefWidth="309.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Homail.GuiProjects.PxToRem.PxToRemController">
+<AnchorPane prefHeight="299.0" prefWidth="309.0" style="-fx-background-color: #2C3E50;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Homail.GuiProjects.PxToRem.PxToRemController">
    <children>
-      <TextField fx:id="pxTextField" layoutX="19.0" layoutY="83.0" onKeyTyped="#performCalculationPx" prefHeight="43.0" prefWidth="179.0" style="-fx-font-size: 20; -fx-border-color: #183b56; -fx-background-color: transparent; -fx-text-fill: #183b56;" />
-      <Button layoutX="211.0" layoutY="83.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="83.0" style="-fx-background-color: #2294ed; -fx-text-fill: #ffffff; -fx-font-size: 20;" text="Pixel" AnchorPane.topAnchor="82.0" />
-      <TextField fx:id="remTextField" layoutX="19.0" layoutY="157.0" onKeyTyped="#performCalculationRem" prefHeight="43.0" prefWidth="179.0" style="-fx-font-size: 20; -fx-border-color: #183b56; -fx-background-color: transparent; -fx-text-fill: #183b56;" />
-      <Button layoutX="211.0" layoutY="157.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="83.0" style="-fx-background-color: #2294ed; -fx-text-fill: #ffffff; -fx-font-size: 20;" text="Rem" AnchorPane.topAnchor="156.0" />
-      <Text fx:id="mainText" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Values" textAlignment="CENTER" wrappingWidth="308.9999999999999">
+      <TextField fx:id="pxTextField" layoutX="19.0" layoutY="81.0" onKeyTyped="#performCalculationPx" prefHeight="43.0" prefWidth="179.0" style="-fx-font-size: 20; -fx-border-color: white; -fx-background-color: transparent; -fx-text-fill: white; -fx-border-width: 3;" />
+      <Button layoutX="211.0" layoutY="83.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="83.0" style="-fx-background-color: #3498DB; -fx-text-fill: #ECF0F1; -fx-font-size: 20; -fx-font-weight: bold;" text="Pixel" AnchorPane.topAnchor="82.0" />
+      <TextField fx:id="remTextField" layoutX="19.0" layoutY="155.0" onKeyTyped="#performCalculationRem" prefHeight="43.0" prefWidth="179.0" style="-fx-font-size: 20; -fx-border-color: white; -fx-background-color: transparent; -fx-text-fill: white; -fx-border-width: 3;" />
+      <Button layoutX="211.0" layoutY="157.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="83.0" style="-fx-background-color: #3498DB; -fx-text-fill: #ECF0F1; -fx-font-size: 20; -fx-font-weight: bold;" text="Rem" AnchorPane.topAnchor="156.0" />
+      <Text fx:id="mainText" fill="WHITE" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ECF0F1; -fx-font-weight: bold;" text="Enter Values" textAlignment="CENTER" wrappingWidth="308.9999999999999">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <Button fx:id="stayOnTopBtn" layoutX="18.0" layoutY="229.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="276.0" styleClass="stayOnTopBtn" stylesheets="@pxToRemStyle.css" text="Always stay on top:OFF" />
+      <Button fx:id="stayOnTopBtn" layoutX="18.0" layoutY="229.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="276.0" style="-fx-background-color: #3498DB; -fx-text-fill: #ECF0F1; -fx-font-weight: bold;" styleClass="stayOnTopBtn" stylesheets="@pxToRemStyle.css" text="Always stay on top:OFF" />
    </children>
 </AnchorPane>

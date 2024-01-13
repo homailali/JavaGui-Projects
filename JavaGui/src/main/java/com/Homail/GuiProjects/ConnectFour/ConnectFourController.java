@@ -23,6 +23,10 @@ public class ConnectFourController implements Initializable {
     protected Circle playerTurnCircle;
     @FXML
     protected Text throwingInColText;
+    @FXML
+    protected Text turnString;
+    @FXML
+    protected Text playerString;
     // Normal Fields
     private ConnectFourBallsThrower connectFourBallsThrower;
     public void initialize(URL url, ResourceBundle resourceBundle) {
