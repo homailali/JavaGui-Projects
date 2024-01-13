@@ -3,6 +3,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -19,7 +20,7 @@ public class ConnectFourMain extends Application {
     }
     // Methods
     public void start(Stage primaryStage){
-        this.CONNECT_FOUR_CONTROLLER.passConnectFourLogicInstance(this.CONNECT_FOUR_BallsThrower);
+        this.CONNECT_FOUR_CONTROLLER.passConnectFourBallsThrowerInstance(this.CONNECT_FOUR_BallsThrower);
         this.sceneSettings();
         this.stageSettings();
     }
@@ -31,6 +32,7 @@ public class ConnectFourMain extends Application {
         this.STAGE.setScene(this.SCENE);
         this.STAGE.setResizable(false);
         this.STAGE.setTitle("Connect Four");
+        this.STAGE.getIcons().add(new Image("Connect_4.png"));
         this.STAGE.show();
     }
     public static void main(String[] args) {

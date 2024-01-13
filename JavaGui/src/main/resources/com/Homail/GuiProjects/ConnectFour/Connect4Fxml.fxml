@@ -9,13 +9,33 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Homail.GuiProjects.ConnectFour.ConnectFourController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="600.0" style="-fx-background-color: #20615B;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Homail.GuiProjects.ConnectFour.ConnectFourController">
    <children>
       <AnchorPane fx:id="sideScreen" layoutX="-2.0" layoutY="-2.0" prefHeight="468.0" prefWidth="233.0" style="-fx-background-color: #255F85;">
          <children>
             <Text fill="WHITE" layoutX="13.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Connect Four" textAlignment="CENTER" wrappingWidth="208.00002034505212">
                <font>
                   <Font name="SansSerif Regular" size="30.0" />
+               </font>
+            </Text>
+            <AnchorPane fx:id="playerTurnTextContainer" layoutX="17.0" layoutY="52.0" prefHeight="67.0" prefWidth="233.0" AnchorPane.bottomAnchor="349.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
+               <children>
+                  <Text fill="WHITE" layoutX="12.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player " wrappingWidth="108.13662719726562">
+                     <font>
+                        <Font name="SansSerif Regular" size="30.0" />
+                     </font>
+                  </Text>
+                  <Circle fx:id="playerTurnCircle" fill="DODGERBLUE" layoutX="128.0" layoutY="33.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: none; -fx-fill: CRIMSON;" />
+                  <Text fill="WHITE" layoutX="158.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="turn" wrappingWidth="52.0">
+                     <font>
+                        <Font name="SansSerif Regular" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <Text fx:id="throwingInColText" fill="WHITE" layoutX="7.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Throwing in column " textAlignment="CENTER">
+               <font>
+                  <Font size="23.0" />
                </font>
             </Text>
          </children>
@@ -49,7 +69,6 @@
                   <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="44.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke: none;" GridPane.rowIndex="3" />
                   <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="44.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke: none;" GridPane.rowIndex="2" />
                   <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="305.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke: none;" GridPane.rowIndex="5" />
-                  <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="44.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-Cursor:hand; -fx-fill: white; -fx-stroke: none;" />
                   <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="44.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke: none;" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                   <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="44.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke: none;" GridPane.columnIndex="4" GridPane.rowIndex="4" />
                   <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="44.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke: none;" GridPane.columnIndex="4" GridPane.rowIndex="3" />
@@ -70,17 +89,13 @@
                   <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="44.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke: none;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                   <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="44.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke: none;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                   <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="44.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke: none;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="44.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-Cursor:hand; -fx-fill: white; -fx-stroke: none;" />
-                  <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="44.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-Cursor:hand; -fx-fill: white; -fx-stroke: none;" />
-                  <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="44.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-Cursor:hand; -fx-fill: white; -fx-stroke: none;" />
-                  <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="44.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-Cursor:hand; -fx-fill: white; -fx-stroke: none;" />
-                  <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="44.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke: none;" />
                   <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="44.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke: none;" GridPane.columnIndex="5" GridPane.rowIndex="5" />
                   <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="44.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke: none;" GridPane.columnIndex="5" GridPane.rowIndex="4" />
                   <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="44.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke: none;" GridPane.columnIndex="5" GridPane.rowIndex="3" />
                   <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="44.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke: none;" GridPane.columnIndex="5" GridPane.rowIndex="2" />
                   <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="44.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke: none;" GridPane.columnIndex="5" GridPane.rowIndex="1" />
                   <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="44.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke: none;" GridPane.columnIndex="5" />
+                  <Circle fill="DODGERBLUE" layoutX="36.0" layoutY="110.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke: none;" />
                </children>
             </GridPane>
          </children>
