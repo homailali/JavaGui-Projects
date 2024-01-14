@@ -35,6 +35,7 @@ public class ConnectFourBallsThrower {
         this.CONNECT_FOUR_CONTROLLER = connectFourController;
         this.CONNECT_FOUR_WINNER_CHECKER=new ConnectFourWinnerChecker(this.CONNECT_FOUR_MAIN,this.CONNECT_FOUR_CONTROLLER,this);
         this.SIDE_SCREEN_MANAGER=new SideScreenManager(this.CONNECT_FOUR_MAIN,this.CONNECT_FOUR_CONTROLLER,this,this.CONNECT_FOUR_WINNER_CHECKER);
+        this.CONNECT_FOUR_WINNER_CHECKER.getSideScreenInstance(this.SIDE_SCREEN_MANAGER);
         this.thingsToDoWhenObjectIsCreated();
     }
     // METHODS

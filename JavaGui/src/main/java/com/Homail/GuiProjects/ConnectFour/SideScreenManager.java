@@ -13,6 +13,30 @@ public class SideScreenManager {
         CONNECT_FOUR_WINNER_CHECKER = connectFourWinnerChecker;
     }
     // Methods
+    // These methods will activate when the game ends
+    protected void manageStartEndAndDirectionText(int column){
+        this.CONNECT_FOUR_BALLS_THROWER.startColInt=column;
+        if (this.CONNECT_FOUR_BALLS_THROWER.boolToCheckIfWonDiagonallyLeft) {
+            if (this.CONNECT_FOUR_BALLS_THROWER.boolToCheckIfWonRowWise) {
+                this.CONNECT_FOUR_BALLS_THROWER.endColInt = column + 3;
+            } else {
+                this.CONNECT_FOUR_CONTROLLER.directionText.setText("Row Wise");
+                this.CONNECT_FOUR_BALLS_THROWER.endColInt=column;
+            }
+        }
+        else {
+            this.CONNECT_FOUR_CONTROLLER.directionText.setText("Diagonally Left");
+            this.CONNECT_FOUR_BALLS_THROWER.endColInt=column-3;
+        }
+        this.setStartAndEndText();
+    }
+    private void setStartAndEndText(){
+        if (this.CONNECT_FOUR_BALLS_THROWER.boolToSeparateDrawAndWinSituation) {
+            this.CONNECT_FOUR_CONTROLLER.startEndColText.setVisible(true);
+            this.CONNECT_FOUR_CONTROLLER.directionText.setVisible(true);
+            this.CONNECT_FOUR_CONTROLLER.startEndColText.setText("Start col:"+this.CONNECT_FOUR_BALLS_THROWER.startColInt+" End col:"+this.CONNECT_FOUR_BALLS_THROWER.endColInt);
+        }
+    }
     // These methods will activate as soon as user releases the primary key
     protected void thingsToCallAfterButtonRelease(){
         this.resetTheThrowingInColText();

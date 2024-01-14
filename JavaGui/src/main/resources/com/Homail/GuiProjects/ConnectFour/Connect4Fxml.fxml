@@ -71,9 +71,9 @@
                   <Font size="30.0" />
                </font>
             </Text>
-            <Text fx:id="startEndColText" fill="WHITE" layoutX="8.0" layoutY="417.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start col:0 End col:0" textAlignment="CENTER" visible="false" wrappingWidth="214.78485107421875">
+            <Text fx:id="startEndColText" fill="WHITE" layoutX="3.0" layoutY="417.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start col:0 End col:0" textAlignment="CENTER" visible="false" wrappingWidth="224.95819091796875">
                <font>
-                  <Font size="24.0" />
+                  <Font size="21.0" />
                </font>
             </Text>
             <Text fx:id="directionText" fill="WHITE" layoutX="9.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Left" textAlignment="CENTER" visible="false" wrappingWidth="214.78485107421875">

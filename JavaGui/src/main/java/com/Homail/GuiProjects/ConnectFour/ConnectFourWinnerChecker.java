@@ -6,6 +6,7 @@ public class ConnectFourWinnerChecker {
     private final ConnectFourController CONNECT_FOUR_CONTROLLER;
     private final ConnectFourBallsThrower CONNECT_FOUR_BALLS_THROWER;
     private final Connect4EndGameSettings END_GAME_SETTINGS;
+    private SideScreenManager sideScreenManager;
     // Constructor
     public ConnectFourWinnerChecker(ConnectFourMain connectFourMain, ConnectFourController connectFourController, ConnectFourBallsThrower connectfourballsthrower) {
         this.CONNECT_FOUR_MAIN = connectFourMain;
@@ -57,30 +58,10 @@ public class ConnectFourWinnerChecker {
            this.checkingDiagonallyRight(color,row,column);
            this.checkingDiagonallyLeft(color,row,column);
            if (!this.CONNECT_FOUR_BALLS_THROWER.boolToKeepTheGameRunning) {
+               this.sideScreenManager.manageStartEndAndDirectionText(column);
                this.CONNECT_FOUR_BALLS_THROWER.winnerColor=color;
-               this.CONNECT_FOUR_BALLS_THROWER.startColInt=column;
-               if (this.CONNECT_FOUR_BALLS_THROWER.boolToCheckIfWonDiagonallyLeft) {
-                   if (this.CONNECT_FOUR_BALLS_THROWER.boolToCheckIfWonRowWise) {
-                       this.CONNECT_FOUR_BALLS_THROWER.endColInt = column + 3;
-                   } else {
-                       this.CONNECT_FOUR_CONTROLLER.directionText.setText("Row Wise");
-                       this.CONNECT_FOUR_BALLS_THROWER.endColInt=column;
-                   }
-               }
-               else {
-                   this.CONNECT_FOUR_CONTROLLER.directionText.setText("Diagonally Left");
-                   this.CONNECT_FOUR_BALLS_THROWER.endColInt=column-3;
-               }
-               this.setStartAndEndText();
            }
        }
-    }
-    private void setStartAndEndText(){
-        if (this.CONNECT_FOUR_BALLS_THROWER.boolToSeparateDrawAndWinSituation) {
-            this.CONNECT_FOUR_CONTROLLER.startEndColText.setVisible(true);
-            this.CONNECT_FOUR_CONTROLLER.directionText.setVisible(true);
-            this.CONNECT_FOUR_CONTROLLER.startEndColText.setText("Start col:"+this.CONNECT_FOUR_BALLS_THROWER.startColInt+" End col:"+this.CONNECT_FOUR_BALLS_THROWER.endColInt);
-        }
     }
     private void checkingColumnWise(Color color,int row,int column){
         int columnEnd=column+3;
@@ -131,5 +112,9 @@ public class ConnectFourWinnerChecker {
         }
         this.CONNECT_FOUR_BALLS_THROWER.boolToKeepTheGameRunning=false;
         this.CONNECT_FOUR_BALLS_THROWER.boolToCheckIfWonDiagonallyLeft=false;
+    }
+    protected void getSideScreenInstance(SideScreenManager sideScreenManager){
+
+        this.sideScreenManager=sideScreenManager;
     }
 }

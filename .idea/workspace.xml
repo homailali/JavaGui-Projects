@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84b6ecae-1f50-480d-89b8-9567ab89d63e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/ConnectFourBallsThrower.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/ConnectFourBallsThrower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/ConnectFourController.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/ConnectFourController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/ConnectFourMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/ConnectFourMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/ConnectFourWinnerChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/ConnectFourWinnerChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/EndGameSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/Connect4EndGameSettings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/RestartHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/Connect4RestartHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/SideScreenManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/SideScreenManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaGui/src/main/resources/com/Homail/GuiProjects/ConnectFour/Connect4Fxml.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaGui/src/main/resources/com/Homail/GuiProjects/ConnectFour/Connect4Fxml.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/Connect4Fxml.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/Connect4Fxml.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/ConnectFourBallsThrower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/ConnectFourBallsThrower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/ConnectFourController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/ConnectFourController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/ConnectFourMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/ConnectFourMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/ConnectFourWinnerChecker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/ConnectFourWinnerChecker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/EndGameSettings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/RestartHandler.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
