@@ -5,21 +5,28 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
-
 public class ConnectFourBallsThrower {
     // Fields
     protected int column;
     private Circle circle;
+    protected int endColInt;
+    protected int drawsCount;
+    protected int startColInt;
+    protected  Color winnerColor;
+    protected int player1WinsCount;
+    protected int player2WinsCount;
     protected int countForPlayerColor;
-    protected int toIdentifyTheWinner;
     protected boolean boolToKeepTheGameRunning;
     private boolean boolToStopMovingTheCircle=true;
     private final ConnectFourMain CONNECT_FOUR_MAIN;
+    protected boolean boolToCheckIfWonRowWise=true;
+    private final SideScreenManager SIDE_SCREEN_MANAGER;
     protected final Color PLAYER_ONE_COLOR=Color.CRIMSON;
     protected final Color BOARD_CIRCLES_COLOR=Color.WHITE;
+    protected boolean boolToCheckIfWonDiagonallyLeft=true;
     protected final Circle[][] CIRCLE_ARR=new Circle[6][6];
     protected final Color PLAYER_TWO_COLOR=Color.DODGERBLUE;
-    private final SideScreenManager SIDE_SCREEN_MANAGER;
+    protected boolean boolToSeparateDrawAndWinSituation=true;
     private final ConnectFourController CONNECT_FOUR_CONTROLLER;
     private final ConnectFourWinnerChecker CONNECT_FOUR_WINNER_CHECKER;
     // CONSTRUCTOR
@@ -61,7 +68,6 @@ public class ConnectFourBallsThrower {
             this.CONNECT_FOUR_WINNER_CHECKER.mainOfConnect4Winner();
         }
     }
-
     // Press Settings
     private void setUpTheCircle(){
         this.circle = new Circle();
@@ -92,12 +98,7 @@ public class ConnectFourBallsThrower {
             this.boolToStopMovingTheCircle = true;
         }
     }
-
     // Release Settings
-    private void increaseTheCount(){
-
-        this.countForPlayerColor++;
-    }
     private void fillTheColumnAfterMouseRelease(){
         boolean bool=false;
         for (int i=this.CIRCLE_ARR.length-1;i>=0;i--){
@@ -107,9 +108,18 @@ public class ConnectFourBallsThrower {
                 break;
             }
         }
-        if (bool) this.increaseTheCount();
+        if (bool) {
+            this.increaseTheCount();
+            this.CONNECT_FOUR_CONTROLLER.colFilledText.setText("Go on buddy");
+        }
+        else {
+            this.CONNECT_FOUR_CONTROLLER.colFilledText.setText("Column "+this.column+" filled");
+        }
     }
+    private void increaseTheCount(){
 
+        this.countForPlayerColor++;
+    }
     // Filling the circle arr
     private void fillArrWithGridPaneCircles(){
         int row;

@@ -1,8 +1,4 @@
 package com.Homail.GuiProjects.ConnectFour;
-
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-
 public class SideScreenManager {
     // Fields
     private final ConnectFourMain CONNECT_FOUR_MAIN;

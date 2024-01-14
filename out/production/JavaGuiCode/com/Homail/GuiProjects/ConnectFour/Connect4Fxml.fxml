@@ -21,13 +21,13 @@
             </Text>
             <AnchorPane fx:id="playerTurnTextContainer" layoutX="17.0" layoutY="52.0" prefHeight="67.0" prefWidth="233.0" AnchorPane.bottomAnchor="349.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
                <children>
-                  <Text fx:id="playerString" fill="WHITE" layoutX="14.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player " textAlignment="CENTER" wrappingWidth="108.13662719726562">
+                  <Text fx:id="playerString" fill="WHITE" layoutX="20.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player " textAlignment="RIGHT" wrappingWidth="83.33334350585938">
                      <font>
                         <Font name="SansSerif Regular" size="25.0" />
                      </font>
                   </Text>
                   <Circle fx:id="playerTurnCircle" fill="DODGERBLUE" layoutX="126.0" layoutY="26.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: none; -fx-fill: Crimson;" />
-                  <Text fx:id="turnString" fill="WHITE" layoutX="135.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="turn" textAlignment="CENTER" wrappingWidth="83.33334350585938">
+                  <Text fx:id="turnString" fill="WHITE" layoutX="138.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="turn" textAlignment="CENTER" wrappingWidth="83.33334350585938">
                      <font>
                         <Font name="SansSerif Regular" size="25.0" />
                      </font>
@@ -39,11 +39,48 @@
                   <Font size="23.0" />
                </font>
             </Text>
-            <Button layoutX="57.0" layoutY="381.0" mnemonicParsing="false" style="-fx-background-color: #20615B;" text="Restart" textFill="WHITE">
+            <Button fx:id="restartButton" layoutX="57.0" layoutY="336.0" mnemonicParsing="false" style="-fx-background-color: #20615B; -fx-cursor: hand;" text="Restart" textFill="WHITE">
                <font>
                   <Font name="SansSerif Regular" size="26.0" />
                </font>
             </Button>
+            <AnchorPane fx:id="winsContainer" layoutX="16.0" layoutY="156.0" prefHeight="129.0" prefWidth="200.0">
+               <children>
+                  <Circle fill="DODGERBLUE" layoutX="45.0" layoutY="23.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: crimson; -fx-stroke: none;" />
+                  <Text fx:id="player1WinsText" fill="WHITE" layoutX="70.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wins 0" wrappingWidth="125.99999999999989">
+                     <font>
+                        <Font name="SansSerif Regular" size="25.0" />
+                     </font>
+                  </Text>
+                  <Circle fill="DODGERBLUE" layoutX="45.0" layoutY="65.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #1e90ff; -fx-stroke: none;" />
+                  <Text fx:id="player2WinsText" fill="WHITE" layoutX="70.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wins 0" wrappingWidth="125.99999999999989">
+                     <font>
+                        <Font name="SansSerif Regular" size="25.0" />
+                     </font>
+                  </Text>
+                  <Circle fill="DODGERBLUE" layoutX="45.0" layoutY="107.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: white; -fx-stroke: none;" />
+                  <Text fx:id="drawsText" fill="WHITE" layoutX="70.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Draws 0" wrappingWidth="125.99999999999994">
+                     <font>
+                        <Font name="SansSerif Regular" size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <Text fx:id="colFilledText" fill="WHITE" layoutX="8.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Go on buddy" textAlignment="CENTER" wrappingWidth="214.78485107421875">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fx:id="startEndColText" fill="WHITE" layoutX="8.0" layoutY="417.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start col:0 End col:0" textAlignment="CENTER" visible="false" wrappingWidth="214.78485107421875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="directionText" fill="WHITE" layoutX="9.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Left" textAlignment="CENTER" visible="false" wrappingWidth="214.78485107421875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="232.8" layoutY="74.0" prefHeight="392.0" prefWidth="368.0" style="-fx-background-color: #272727;">

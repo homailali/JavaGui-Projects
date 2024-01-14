@@ -5,7 +5,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 public class ConnectFourMain extends Application {
     // Fields
@@ -15,12 +14,14 @@ public class ConnectFourMain extends Application {
     private final Stage STAGE=new Stage();
     private final ConnectFourController CONNECT_FOUR_CONTROLLER=FXMLLOADER.getController();
     private final ConnectFourBallsThrower CONNECT_FOUR_BallsThrower=new ConnectFourBallsThrower(this,this.CONNECT_FOUR_CONTROLLER);
+    protected final Connect4RestartHandler CONNECT4_RESTART_HANDLER=new Connect4RestartHandler(this,this.CONNECT_FOUR_CONTROLLER,this.CONNECT_FOUR_BallsThrower);
     // Constructor
     public ConnectFourMain() throws IOException {
     }
     // Methods
     public void start(Stage primaryStage){
-        this.CONNECT_FOUR_CONTROLLER.passConnectFourBallsThrowerInstance(this.CONNECT_FOUR_BallsThrower);
+        this.CONNECT_FOUR_CONTROLLER.restartButton.setOnMouseClicked(this.CONNECT4_RESTART_HANDLER);
+        this.CONNECT_FOUR_CONTROLLER.passInstancesOfSpecificClassesToController(this.CONNECT_FOUR_BallsThrower,this.CONNECT4_RESTART_HANDLER);
         this.sceneSettings();
         this.stageSettings();
     }

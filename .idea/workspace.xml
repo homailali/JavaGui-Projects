@@ -5,56 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84b6ecae-1f50-480d-89b8-9567ab89d63e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/EndGameSettings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/RestartHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/ConnectFourBallsThrower.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/ConnectFourBallsThrower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/ConnectFourController.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/ConnectFourController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/ConnectFourMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/ConnectFourMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/ConnectFourWinnerChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/ConnectFourWinnerChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/Practice/GuiPractice/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/Practice/GuiPractice/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/EndGameSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/Connect4EndGameSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/RestartHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/Connect4RestartHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/SideScreenManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaGui/src/main/java/com/Homail/GuiProjects/ConnectFour/SideScreenManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaGui/src/main/resources/com/Homail/GuiProjects/ConnectFour/Connect4Fxml.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaGui/src/main/resources/com/Homail/GuiProjects/ConnectFour/Connect4Fxml.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/BG Images/snake-game-ai-gen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiPractice/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/Calculator/CalculatorDesigns$1ClassForSettingButtons.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/Calculator/CalculatorDesigns.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/Calculator/CalculatorEventHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/Calculator/CalculatorMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/Calculator/CalculatorNodes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/Calculator/CheckForBugsInText.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/Calculator/PerformCalculations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/HangManGame/ChooseARandomWord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/HangManGame/CloseButtonHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/HangManGame/HangManCss.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/HangManGame/HangManEventHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/HangManGame/HangManFxml.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/HangManGame/HangManFxmlController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/HangManGame/HangManMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/HangManGame/RestartButtonHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/PxToRem/PxToRemFxml.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/PxToRem/PxToRemFxml.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/PxToRem/PxToRemMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/PxToRem/PxToRemMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/PxToRem/pxToRemStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/PxToRem/pxToRemStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/RockPaperScissors/RPSMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/RockPaperScissors/RPSMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/RockPaperScissorsResources/RPS.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/RockPaperScissorsResources/RPSFxml.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/SnakeGame/AnimationHandleCollisionDetection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/SnakeGame/GameRestartOperations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/SnakeGame/PutSnakeOnAnimationAndHandleFood.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/SnakeGame/SceneEventHandler$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/SnakeGame/SceneEventHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/SnakeGame/SnakeFxmlController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/SnakeGame/SnakeFxmlFile.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/SnakeGame/SnakeMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/SnakeGame/SnakeStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/StopWatch/StopWatchMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/StopWatch/StopWatchMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/TicTacToe/TicTacToeBoardDesign$1ClassForDesign.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/TicTacToe/TicTacToeBoardDesign.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/TicTacToe/TicTacToeHandleEvents$1ResetButtons.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/TicTacToe/TicTacToeHandleEvents.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/TicTacToe/TicTacToeMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/TicTacToe/TicTacToeNodes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ToDoApp/ToDoFxml.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ToDoApp/ToDoFxml.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/snake.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/Connect4Fxml.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/Connect4Fxml.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/ConnectFourBallsThrower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/ConnectFourBallsThrower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/ConnectFourController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/ConnectFourController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/ConnectFourMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/ConnectFourMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/ConnectFourWinnerChecker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/ConnectFourWinnerChecker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/EndGameSettings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaGuiCode/com/Homail/GuiProjects/ConnectFour/RestartHandler.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,21 +48,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ConnectFourMain.executor": "Run",
-    "Application.SnakeMain.executor": "Run",
-    "Application.StopWatchMain.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/FINE COMPUTERS/JavaGuiCode",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ConnectFourMain.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SnakeMain.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SnakeMainMedium.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StopWatchMain.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/FINE COMPUTERS/JavaGuiCode&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.ConnectFourMain">
     <configuration name="ConnectFourMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Homail.GuiProjects.ConnectFour.ConnectFourMain" />
@@ -104,6 +71,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.Homail.GuiProjects.ConnectFour.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SnakeMainMedium" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Homail.GuiProjects.SnakeGame.MediumVersion.SnakeMainMedium" />
+      <module name="JavaGuiCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Homail.GuiProjects.SnakeGame.MediumVersion.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,6 +107,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ConnectFourMain" />
+        <item itemvalue="Application.SnakeMainMedium" />
         <item itemvalue="Application.StopWatchMain" />
       </list>
     </recent_temporary>
